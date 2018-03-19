@@ -2,24 +2,25 @@
 {
     public class BasketItem
     {
-        private double price;
-        private string product;
-        private int quantity;
-        private double tPrice;
         public static double total;
+        public static int quant;
+      
+      
+        public double price { get; set; }
+        public int quantity { get; set; }
+        public string product  { get; set; }
+        public object Items { get; internal set; }
+        public double tPrice { get; set; }
 
-        public BasketItem(string product, int quantity, double price)
+        public BasketItem(string product, int quantity, double price, double tPrice)
         {
             this.product = product;
             this.quantity = quantity;
             this.price = price;
             this.tPrice = price * quantity;
-
-            total = this.tPrice + tPrice;
-
-            
+            total = tPrice;
+            quant = quantity;
         }
-
 
         public override string ToString()
         {

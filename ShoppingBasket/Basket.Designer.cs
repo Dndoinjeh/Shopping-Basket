@@ -45,11 +45,12 @@
             this.ClearBask = new System.Windows.Forms.Button();
             this.Save = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.label7 = new System.Windows.Forms.Label();
             this.Product = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.q1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,7 +69,7 @@
             this.basket.ItemHeight = 16;
             this.basket.Location = new System.Drawing.Point(34, 112);
             this.basket.Name = "basket";
-            this.basket.Size = new System.Drawing.Size(399, 244);
+            this.basket.Size = new System.Drawing.Size(454, 244);
             this.basket.TabIndex = 1;
             this.basket.SelectedIndexChanged += new System.EventHandler(this.basket_SelectedIndexChanged);
             // 
@@ -78,6 +79,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 2;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox3
             // 
@@ -90,11 +92,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(296, 379);
+            this.label1.Location = new System.Drawing.Point(281, 379);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 13);
+            this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Total";
+            this.label1.Text = "Total:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
@@ -152,7 +154,7 @@
             // 
             // Add
             // 
-            this.Add.Location = new System.Drawing.Point(467, 42);
+            this.Add.Location = new System.Drawing.Point(494, 42);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(86, 23);
             this.Add.TabIndex = 12;
@@ -162,7 +164,7 @@
             // 
             // Remove
             // 
-            this.Remove.Location = new System.Drawing.Point(467, 112);
+            this.Remove.Location = new System.Drawing.Point(494, 112);
             this.Remove.Name = "Remove";
             this.Remove.Size = new System.Drawing.Size(86, 23);
             this.Remove.TabIndex = 13;
@@ -172,7 +174,7 @@
             // 
             // Edit
             // 
-            this.Edit.Location = new System.Drawing.Point(467, 163);
+            this.Edit.Location = new System.Drawing.Point(494, 163);
             this.Edit.Name = "Edit";
             this.Edit.Size = new System.Drawing.Size(86, 23);
             this.Edit.TabIndex = 14;
@@ -182,7 +184,7 @@
             // 
             // ClearBask
             // 
-            this.ClearBask.Location = new System.Drawing.Point(467, 214);
+            this.ClearBask.Location = new System.Drawing.Point(494, 214);
             this.ClearBask.Name = "ClearBask";
             this.ClearBask.Size = new System.Drawing.Size(86, 23);
             this.ClearBask.TabIndex = 15;
@@ -192,7 +194,7 @@
             // 
             // Save
             // 
-            this.Save.Location = new System.Drawing.Point(467, 269);
+            this.Save.Location = new System.Drawing.Point(494, 269);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(86, 23);
             this.Save.TabIndex = 16;
@@ -202,7 +204,7 @@
             // 
             // Exit
             // 
-            this.Exit.Location = new System.Drawing.Point(467, 373);
+            this.Exit.Location = new System.Drawing.Point(494, 373);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(86, 23);
             this.Exit.TabIndex = 17;
@@ -247,11 +249,31 @@
             this.label10.TabIndex = 21;
             this.label10.Text = "Unit Price:";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(319, 379);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(13, 13);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "£";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(319, 48);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(13, 13);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "£";
+            // 
             // ShoppingBasketForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(586, 419);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.Product);
@@ -302,11 +324,12 @@
         private System.Windows.Forms.Button ClearBask;
         private System.Windows.Forms.Button Save;
         private System.Windows.Forms.Button Exit;
-        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label Product;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label8;
     }
 }
 
